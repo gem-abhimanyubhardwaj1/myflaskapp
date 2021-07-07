@@ -8,7 +8,6 @@ from passlib.hash import sha256_crypt
 
 app= Flask(__name__)
 
-mysql = MySQL(app)
 
 #import pdb; pdb.set_trace()
 app.config['MYSQL_HOST']='localhost'
@@ -17,6 +16,9 @@ app.config['MYSQL_PASSWORD']=''
 app.config['MYSQL_DB']='myflaskapp'
 app.config['MYSQL_CURSORCLASS']='DictCursor'
 
+
+
+mysql = MySQL(app)
 
 Articles = Articles()
 app = Flask(__name__ )
